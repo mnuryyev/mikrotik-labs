@@ -111,12 +111,12 @@ WinBox: `IP → Firewall → Filter Rules` → `+`.
 
 OK.
 
-![Правило ssh blacklisted, General](./screenshots/01_ssh.png)
-![Правило ssh blacklisted, Action drop](./screenshots/02_ssh_drop.png)
+![Правило ssh blacklisted, General](screens/01_ssh.png)
+![Правило ssh blacklisted, Action drop](screens/02_ssh_drop.png)
 
 Перетаскиваем правило мышкой на позицию 3 - сразу после `accept ICMP limited`. Это блок "уже определённые враги" - они дропаются первыми, до любого анализа протокола или порта, экономя CPU и не создавая записей в трекинге попыток.
 
-![Правило на позиции 3 в общем списке](./screenshots/03_ssh_pos_4.png)
+![Правило на позиции 3 в общем списке](screens/03_ssh_pos_4.png)
 
 ```
 Почему именно на позиции 3, а не выше:
@@ -141,7 +141,7 @@ WinBox: правый клик на `ssh blacklisted` → **Copy**. Открыв�
 
 OK.
 
-![Правило winbox blacklisted](./screenshots/04_winbox.png)
+![Правило winbox blacklisted](screens/04_winbox.png)
 
 Перетаскиваем на позицию 4.
 
@@ -186,8 +186,8 @@ OK.
 
 OK.
 
-![Правило ssh stage3, General](./screenshots/05_ssh_stage3.png)
-![Правило ssh stage3, Action - обязательный скрин](./screenshots/06_ssh_stage3.png)
+![Правило ssh stage3, General](screens/05_ssh_stage3.png)
+![Правило ssh stage3, Action - обязательный скрин](screens/06_ssh_stage3.png)
 
 ```
 КЛЮЧЕВАЯ деталь action:
@@ -217,8 +217,8 @@ OK.
 
 OK.
 
-![Правило ssh stage2, General](./screenshots/07_ssh_stage2.png)
-![Правило ssh stage2, Action](./screenshots/08_ssh_stage2.png)
+![Правило ssh stage2, General](screens/07_ssh_stage2.png)
+![Правило ssh stage2, Action](screens/08_ssh_stage2.png)
 
 Позиция 6.
 
@@ -232,8 +232,8 @@ OK.
 
 OK.
 
-![Правило ssh stage1, General](./screenshots/09_ssh_stage1.png)
-![Правило ssh stage1, Action](./screenshots/10_ssh_stage1.png)
+![Правило ssh stage1, General](screens/09_ssh_stage1.png)
+![Правило ssh stage1, Action](screens/10_ssh_stage1.png)
 
 Позиция 7.
 
@@ -253,8 +253,8 @@ OK.
 
 OK.
 
-![Правило ssh new->stage1, General](./screenshots/11_ssh_new.png)
-![Правило ssh new->stage1, Action](./screenshots/12_ssh_new.png)
+![Правило ssh new->stage1, General](screens/11_ssh_new.png)
+![Правило ssh new->stage1, Action](screens/12_ssh_new.png)
 
 Позиция 8.
 
@@ -330,7 +330,7 @@ OK.
 
 Позиция 11.
 
-![Список после добавления всех winbox-правил](./screenshots/13_for_winbox_copy.png)
+![Список после добавления всех winbox-правил](screens/13_for_winbox_copy.png)
 
 ---
 
@@ -338,7 +338,7 @@ OK.
 
 WinBox: `IP → Firewall → Filter Rules` - вся таблица:
 
-![Полный список правил после лабы 1.3](./screenshots/14_all.png)
+![Полный список правил после лабы 1.3](screens/14_all.png)
 
 ```
 #   Action   Chain   Detail                                         Comment
@@ -382,7 +382,7 @@ WinBox: `IP → Firewall → Filter Rules` - вся таблица:
 
 WinBox: `IP → Firewall` → вкладка **Address Lists**.
 
-![Заполненные списки через 5-10 минут после применения](./screenshots/15_after_3_try_not_connecting.png)
+![Заполненные списки через 5-10 минут после применения](screens/15_after_3_try_not_connecting.png)
 
 В списках должны появиться записи помеченные `D` (dynamic) с уменьшающимся timeout:
 
