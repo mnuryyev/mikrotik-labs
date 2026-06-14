@@ -67,7 +67,7 @@
 
 WinBox: справа сверху, рядом с workspace, есть кнопка **Safe Mode**. Нажимаем её, она подсвечивается зелёным/красным (в зависимости от темы).
 
-![Safe Mode активен](./screenshots/01_safe_mode.png)
+![Safe Mode активен](screens/01_safe_mode.png)
 
 ```
 Что делает Safe Mode:
@@ -94,7 +94,7 @@ WinBox: справа сверху, рядом с workspace, есть кнопк�
 
 WinBox: `IP → Firewall` → вкладка **Filter Rules** → выделяем старые drop-правила → красный `−` (Remove).
 
-![Удаление старых DNS-drop правил](./screenshots/02_remove_drop_dns.png)
+![Удаление старых DNS-drop правил](screens/02_remove_drop_dns.png)
 
 Список должен опустеть.
 
@@ -119,8 +119,8 @@ WinBox: `IP → Firewall → Filter Rules` → `+`.
 
 OK.
 
-![Правило 1, вкладка General](./screenshots/03_rule_1.png)
-![Правило 1, вкладка Action](./screenshots/04_rule_1_accept.png)
+![Правило 1, вкладка General](screens/03_rule_1.png)
+![Правило 1, вкладка Action](screens/04_rule_1_accept.png)
 
 ```
 Зачем оно первым:
@@ -161,8 +161,8 @@ Connection tracking держит таблицу всех активных сое
 
 OK.
 
-![Правило 2, вкладка General](./screenshots/05_rule_2.png)
-![Правило 2, вкладка Action](./screenshots/06_rule_2_drop.png)
+![Правило 2, вкладка General](screens/05_rule_2.png)
+![Правило 2, вкладка Action](screens/06_rule_2_drop.png)
 
 ```
 Что такое invalid:
@@ -193,19 +193,19 @@ ICMP полностью дропать не стоит - он используе
 - Chain: `input`
 - Protocol: `icmp` (выбрать из списка или ввести `1`)
 
-![Правило 3, вкладка General](./screenshots/07_rule_3.png)
+![Правило 3, вкладка General](screens/07_rule_3.png)
 
 **Вкладка Extra** → раздел **Limit**:
 - Rate: `1`
 - Burst: `5`
 - Mode: `packet`
 
-![Правило 3, вкладка Extra с настройкой Limit](./screenshots/08_rule_3_extra.png)
+![Правило 3, вкладка Extra с настройкой Limit](screens/08_rule_3_extra.png)
 
 **Action:**
 - Action: `accept`
 
-![Правило 3, вкладка Action](./screenshots/09_rule_3_accept.png)
+![Правило 3, вкладка Action](screens/09_rule_3_accept.png)
 
 **Comment:** `accept ICMP limited`
 
@@ -248,8 +248,8 @@ OK.
 
 OK.
 
-![Правило 4, вкладка General](./screenshots/10_rule_4.png)
-![Правило 4, вкладка Action](./screenshots/11_rule_4_drop.png)
+![Правило 4, вкладка General](screens/10_rule_4.png)
+![Правило 4, вкладка Action](screens/11_rule_4_drop.png)
 
 ```
 Логика связки правил 3 + 4:
@@ -282,8 +282,8 @@ OK.
 
 OK.
 
-![Правило 5, вкладка General](./screenshots/12_rule_5.png)
-![Правило 5, вкладка Action](./screenshots/13_rule_5_drop.png)
+![Правило 5, вкладка General](screens/12_rule_5.png)
+![Правило 5, вкладка Action](screens/13_rule_5_drop.png)
 
 ```
 Что делает это правило:
@@ -320,8 +320,8 @@ Interface List вместо имени интерфейса:
 
 OK.
 
-![Правило 6, вкладка General](./screenshots/14_rule_6.png)
-![Правило 6, вкладка Action](./screenshots/15_rule_6_accept.png)
+![Правило 6, вкладка General](screens/14_rule_6.png)
+![Правило 6, вкладка Action](screens/15_rule_6_accept.png)
 
 ```
 Логика на branch-роутере с настоящим LAN:
@@ -352,7 +352,7 @@ OK.
 
 WinBox: `IP → Firewall → Filter Rules` целиком:
 
-![Итоговая таблица filter rules](./screenshots/15_firewall.png)
+![Итоговая таблица filter rules](screens/15_firewall.png)
 
 ```
 #  Action   Chain    Detail                                Comment
