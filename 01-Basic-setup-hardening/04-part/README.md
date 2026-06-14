@@ -102,7 +102,7 @@
 Наш роутер - 7.12.1 stable.
 ```
 
-![System Resources - версия RouterOS 7.12.1](./screenshots/01_resources.png)
+![System Resources - версия RouterOS 7.12.1](screens/01_resources.png)
 
 ---
 
@@ -128,7 +128,7 @@ WinBox: `System → Scripts` → `+`.
 
 OK.
 
-![Окно New Script с заполненным кодом](./screenshots/02_script.png)
+![Окно New Script с заполненным кодом](screens/02_script.png)
 
 ```
 Разбор по строкам:
@@ -168,7 +168,7 @@ OK.
 
 WinBox: `System → Scripts` → выделить `daily-backup` → кнопка **Run Script** сверху.
 
-![Скрипт запущен, Run Count=1](./screenshots/03_run_script.png)
+![Скрипт запущен, Run Count=1](screens/03_run_script.png)
 
 После запуска в окне Scripts видим:
 - **Run Count: 1** (увеличился)
@@ -176,7 +176,7 @@ WinBox: `System → Scripts` → выделить `daily-backup` → кнопк�
 
 Проверяем результат в `Files`:
 
-![Files с созданными .rsc и .backup](./screenshots/04_files.png)
+![Files с созданными .rsc и .backup](screens/04_files.png)
 
 Должны увидеть два новых файла с одинаковой меткой времени:
 - `BR1-GW-2026-06-14.backup` (~30 KiB)
@@ -197,7 +197,7 @@ WinBox: `System → Scripts` → выделить `daily-backup` → кнопк�
 
 Проверяем что лог записался: `Log`.
 
-![Log с записью Backup created](./screenshots/05_log.png)
+![Log с записью Backup created](screens/05_log.png)
 
 Видим строку `script,info Backup created: BR1-GW-2026-06-14`. Это значит `:log info` сработал, и снаружи через remote syslog мы сможем отслеживать успешность бэкапов.
 
@@ -220,7 +220,7 @@ WinBox: `System → Scheduler` → `+`.
 
 OK.
 
-![Окно New Scheduler с настройками](./screenshots/06_scheduler.png)
+![Окно New Scheduler с настройками](screens/06_scheduler.png)
 
 ```
 Параметры расписания:
@@ -262,7 +262,7 @@ OK.
 
 WinBox: `Files` → правый клик на `BR1-GW-2026-06-14.rsc` → **Download**.
 
-![Содержимое .rsc файла - наши firewall-правила сохранены](./screenshots/07_rsc.png)
+![Содержимое .rsc файла - наши firewall-правила сохранены](screens/07_rsc.png)
 
 В файле видим:
 
@@ -317,7 +317,7 @@ add comment="" disabled=no group=full name=mn
 :log info ("Backup created: " . $fname)
 ```
 
-![Скрипт с добавленной чисткой](./screenshots/08_clean_up.png)
+![Скрипт с добавленной чисткой](screens/08_clean_up.png)
 
 ```
 Что делает блок чистки:
@@ -361,7 +361,7 @@ add comment="" disabled=no group=full name=mn
 ssh-keygen -t ed25519 -f ~/.ssh/mtk_key -N ""
 ```
 
-![Генерация ключа на Debian](./screenshots/09_ssh_key.png)
+![Генерация ключа на Debian](screens/09_ssh_key.png)
 
 ```
 Параметры:
@@ -390,7 +390,7 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP4fzC8oP297Khq1HeTQHTZw7DCfyHpbU+SpXT8bTL/D
 
 Самый простой способ - drag-and-drop файла `mtk_key.pub` в окно `Files` WinBox.
 
-![Файл mtk_key.pub в Files на роутере](./screenshots/10_ssh_key_upload.png)
+![Файл mtk_key.pub в Files на роутере](screens/10_ssh_key_upload.png)
 
 ### Привязка ключа к пользователю `mn`
 
@@ -402,7 +402,7 @@ WinBox: `System → Users` → вкладка **SSH Keys** → кнопка **Im
 
 Import.
 
-![SSH Keys в System Users - ключ привязан к mn](./screenshots/11_ssh_key.png)
+![SSH Keys в System Users - ключ привязан к mn](screens/11_ssh_key.png)
 
 После импорта в списке появляется запись с владельцем ключа (`fsystem@debian` в нашем случае - имя хоста где ключ сгенерирован).
 
@@ -414,7 +414,7 @@ ssh -p 22022 -i ~/.ssh/mtk_key mn@<router-IP>
 
 Если всё правильно - входим без запроса пароля, видим стандартный MikroTik MOTD.
 
-![Успешный SSH-вход по ключу](./screenshots/12_successfully.png)
+![Успешный SSH-вход по ключу](screens/12_successfully.png)
 
 ```
 Интересное наблюдение в MOTD:
